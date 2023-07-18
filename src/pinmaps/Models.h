@@ -49,6 +49,10 @@
   #define PINMAP_STR "CNC v3"
   #include "Pins.CNC3.h"
 #endif
+#if PINMAP == AMPIMPA
+  #define PINMAP_STR "Carlos J. Neiman Observatory"
+  #include "Pins.AMPIMPA.h"
+#endif
 #if PINMAP == Ramps14
   #define PINMAP_STR "RAMPS v1.4"
   #include "Pins.Ramps14.h"

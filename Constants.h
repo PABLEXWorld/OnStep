@@ -52,6 +52,9 @@
 // Arduino CNC Sheild on WeMos D2 R32 (ESP32)
 #define CNC3                        52 // Similar features to MaxESP3
 
+// Carlos J. Neiman Observatory board
+#define AMPIMPA                     53
+
 // Khalid and Dave's PCB for STM32 Blue pill
 #define STM32Blue                   60
 #define STM32Black                  61
