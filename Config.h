@@ -39,7 +39,7 @@
 #define BUZZER_STATE_DEFAULT          OFF //    OFF, ON Start with piezo buzzer/speaker enabled.                              Option
 
 // TIME AND LOCATION ----------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#TLS
-#define TIME_LOCATION_SOURCE          OFF //    OFF, DS3231 (I2c,) DS3234 (Spi,) TEENSY (T3.2 internal,) or GPS source.       Option
+#define TIME_LOCATION_SOURCE       DS3231 //    OFF, DS3231 (I2c,) DS3234 (Spi,) TEENSY (T3.2 internal,) or GPS source.       Option
                                           //         Provides Date/Time, and if available, PPS & Lat/Long also.
 
 // SENSORS ----------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#SENSORS
@@ -62,7 +62,7 @@
 #define PEC_SENSE_STATE              HIGH //   HIGH, Senses the PEC signal rising edge or use LOW for falling edge.           Adjust
                                           //         Ignored in ALTAZM mode.
 
-#define PPS_SENSE                     OFF //    OFF, ON* enables PPS (pulse per second,) senses signal rising edge.           Option
+#define PPS_SENSE                      ON //    OFF, ON* enables PPS (pulse per second,) senses signal rising edge.           Option
                                           //         Better tracking accuracy especially for Mega2560's w/ceramic resonator.
 
 // ST4 INTERFACE --------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#ST4
@@ -79,7 +79,7 @@
 #define GUIDE_DISABLE_BACKLASH        OFF //    OFF, Disable backlash takeup during guiding at <= 1X                          Option
 
 // TRACKING BEHAVIOUR ---------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Mount#TRACKING
-#define TRACK_AUTOSTART               OFF //    OFF, ON Start with tracking enabled.                                          Option
+#define TRACK_AUTOSTART                ON //    OFF, ON Start with tracking enabled.                                          Option
 #define TRACK_REFRACTION_RATE_DEFAULT OFF //    OFF, ON Start w/atmospheric refract. compensation (RA axis/Eq mounts only.)   Option
 #define TRACK_BACKLASH_RATE            25 //     25, n. Where n=2..50 (x sidereal rate) during backlash takeup.               Option
                                           //         Too fast motors stall/gears slam or too slow and sluggish in backlash.
@@ -87,7 +87,7 @@
 // SLEWING BEHAVIOUR ------------------------------------------ see https://onstep.groups.io/g/main/wiki/Configuration-Mount#SLEWING
 #define SLEW_RATE_BASE_DESIRED       0.75 //    1.0, n. Desired slew rate in deg/sec. Adjustable at run-time from            <-Req'd
                                           //         1/2 to 2x this rate, and as MCU performace considerations require.
-#define SLEW_RATE_MEMORY              OFF //    OFF, ON Remembers rates set across power cycles.                              Option
+#define SLEW_RATE_MEMORY               ON //    OFF, ON Remembers rates set across power cycles.                              Option
 #define SLEW_ACCELERATION_DIST        5.0 //    5.0, n, (degrees.) Approx. distance for acceleration (and deceleration.)      Adjust
 #define SLEW_RAPID_STOP_DIST          2.5 //    2.0, n, (degrees.) Approx. distance required to stop when a slew              Adjust
                                           //         is aborted or a limit is exceeded.
